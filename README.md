@@ -90,7 +90,6 @@ We have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 - Filebeat allows us to collect logs from each machine and passes them to Elasticsearch or Logstash so that they are indexed and easily searchable (eg: all logs in /etc/logs/ from each machine). Metricbeat allows us to collect metrics from each machine so we are able to track the health of the machines in a centralised location. These metrics include uptime, CPU usage, RAM usage, etc.
 
 ### Using the Playbook
