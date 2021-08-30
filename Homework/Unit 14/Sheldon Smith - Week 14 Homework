@@ -1,0 +1,71 @@
+HTTP Requests and Responses
+
+1. Client-Server Architecture
+2. A request line, a set of header fields and a body.
+3. The body.
+4. A start line, a block of headers and a body.
+5. 400
+6. GET and POST.
+7. POST
+8. The header.
+9. The body.
+
+Using cURL
+
+10. It's flexible and capible of completing complex tasks.
+11. --request
+12. -H
+13. -I
+14. POST
+
+Sessions and Cookies
+
+15. Set-Cookie
+16. Cookie
+
+Example HTTP Requests and Responses
+
+17. POST
+18. Upgrade-Insecure-Requests
+19. No
+20. Username and password.
+21. 200
+22. Apache
+23. Yes
+24. A HTML web page.
+25. Strict-Transport-Security, X-Content-Type, X-Frame-Options and X-XSS-Protection.
+
+Monoliths and Microservices
+
+26. Service mesh
+27. API Gateway
+28. Containers
+
+Deploying and Testing a Container Set
+
+29. Docker Compose
+30. YAML file extension
+
+Databases
+
+31. SELECT * FROM customers;
+32. INSERT INTO <table_name>(column1, column2, ...) VALUES(value1, value2, ...);
+33. This will delete all data from each row within the table.
+
+Bonus: Cookie Jar
+
+Step 3
+1. curl --form "log=Ryan" --form "pwd=123456" http://localhost:8080/wp-login.php --verbose
+Yes. A Set-Cookie header displays "wordpress_logged_in_".
+2. curl --cookie-jar ./ryancookie.txt --form "log=Ryan" --form "pwd=123456" http://localhost:8080/wp-login.php --verbose
+3. 3 items exist.
+
+Step 4
+1. curl --cookie ./ryancookie.txt http://localhost:8080/wp-login.php --verbose
+No, dashboard access isn't obvious.
+2. curl --cookie ./ryancookie.txt http://localhost:8080/wp-login.php --verbose | grep Dashboard
+Yes, the wording does look familiar.
+
+Step 5
+1. curl --cookie ./ryancookie.txt http://localhost:8080/wp-admin/users.php --verbose
+The response returns a 302 code, indicating a login was successful however didn't return the page.
