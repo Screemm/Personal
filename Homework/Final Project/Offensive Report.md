@@ -11,8 +11,8 @@ Nmap scan results for each machine reveal the below services and OS details:
 
 ```bash
 $ nmap -O -sV 192.168.1.110
-  ![Target 1 nmap scan]()
 ```
+![Target 1 nmap scan]()
 
 This scan identifies the services below as potential points of entry:
 - Target 1
@@ -24,11 +24,11 @@ This scan identifies the services below as potential points of entry:
 
 The following vulnerabilities were identified on each target:
 - Target 1
-  - OpenSSH 6.7p1 Denial of Service - High - CVE-2016-0778
-  - Apache 2.4.10 HTTP Trailers processing bypass - Low - CVE-2013-5704
-  - Apache 2.4.10 mod_cache crash with empty Content-Type header - Low - CVE-2014-3581
-  - Apache 2.4.10 mod_proxy_fcgi out-of-bounds memory read - Low - CVE-2014-3583
-  - Apache 2.4.10 mod_lua multiple "Require" directive handling is broken - Low - CVE-2014-8109
+  - User enumeration via WPScan.
+  - Weak user passwords (easily guessable).
+  - Poor directory access control.
+  - Sensetive information in publically viewable files.
+  - Privilege escalation via sudo access to python.
 
 ### Exploitation
 
