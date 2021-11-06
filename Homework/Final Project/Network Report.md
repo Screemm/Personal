@@ -10,7 +10,7 @@ You must inspect your traffic capture to answer the following questions:
 
 *Filter:* `ip.addr==10.6.12.0/24`
 
-![Domain Name](/Images/domain.jpg)
+![Domain Name](images/domain.jpg)
 
 2. What is the IP address of the Domain Controller (DC) of the AD network?
 
@@ -18,7 +18,7 @@ You must inspect your traffic capture to answer the following questions:
 
 *Filter:* `ip.addr==10.6.12.0/24`
 
-![DC IP Address](/Images/dcip.jpg)
+![DC IP Address](images/dcip.jpg)
 
 3. What is the name of the malware downloaded to the 10.6.12.203 machine?
    - Once you have found the file, export it to your Kali machine's desktop.
@@ -29,11 +29,11 @@ You must inspect your traffic capture to answer the following questions:
 
 *Export:* `File`>`Export Objects`>`HTTP`
 
-![Malware](/Images/malware.jpg)
+![Malware](images/malware.jpg)
 
 4. Upload the file to [VirusTotal.com](https://www.virustotal.com/gui/). 
 
-![VirusTotal](/Images/virustotal.jpg)
+![VirusTotal](images/virustotal.jpg)
 
 5. What kind of malware is this classified as?
 
@@ -50,7 +50,7 @@ You must inspect your traffic capture to answer the following questions:
   
 *Filter:* `ip.src==172.16.4.4 and kerberos.CNameString`  
 
-![PC info](/Images/pcinfo.jpg)
+![PC info](images/pcinfo.jpg)
     
 2. What is the username of the Windows user whose computer is infected?
 
@@ -58,7 +58,7 @@ You must inspect your traffic capture to answer the following questions:
 
 *Filter:* `ip.src==172.16.4.205 and kerberos.CNameString`
 
-![Username](/Images/user.jpg)
+![Username](images/user.jpg)
 
 3. What are the IP addresses used in the actual infection traffic?
 
@@ -68,11 +68,11 @@ Referencing `185.243.115.84` `(b569023.green.mattingsolutions.co)` there are a l
 
 *Filter:* `ip.addr==172.16.4.205 and ip.addr==185.243.115.84`
 
-![Results](/Images/wiresharkconversations.jpg)
+![Results](images/wiresharkconversations.jpg)
 
 4. As a bonus, retrieve the desktop background of the Windows host.
 
-![Background](/Images/background.jpg)
+![Background](images/background.jpg)
 
 ---
 
@@ -85,7 +85,7 @@ Referencing `185.243.115.84` `(b569023.green.mattingsolutions.co)` there are a l
 
 *Filter:* `ip.src==10.0.0.201 and kerberos.CNameString`
 
-![Blanco](/Images/blanco.jpg)
+![Blanco](images/blanco.jpg)
 
 2. Which torrent file did the user download?
 
@@ -93,4 +93,4 @@ Referencing `185.243.115.84` `(b569023.green.mattingsolutions.co)` there are a l
 
 *Filter:* `ip.addr==10.0.0.201 and (http.request.uri contains “.torrent”)`
 
-![Torrent](/Images/torrent.jpg)
+![Torrent](images/torrent.jpg)
